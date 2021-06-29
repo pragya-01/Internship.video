@@ -1,0 +1,75 @@
+video {
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+
+
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+button {
+  background-color: #666;
+  border: medium none;
+  color: #fff;
+  display: block;
+  font-size: 300%;
+  padding:8% 0 0 20%;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+button.active {
+  background-color:transparent;
+}
+
+.contentVideo{
+  padding:10% 2% 2% 2%;
+  align-items: center;
+      mix-blend-mode: overlay;
+    text-align: center;
+}
+/*.video{
+  padding: 2% 2% 2% 2%;
+  position:relative;
+}
+.video1 {  
+ display: block;
+ position: absolute;
+ cursor: pointer;
+ overflow: hidden;
+}
+.textVideo {
+ opacity: 0;
+ cursor:pointer;
+ position:relative;
+ color: black;
+ background-color: rgba(200, 200, 200, 0.5);
+ width: 640px;
+ height: 250px;
+ padding:10% 0% 0 0;
+ text-align: center;
+ z-index:1;
+}
+
+.contentVideo{
+   font-size: 100%;
+}
+.video .textVideo:hover {
+ opacity: 1;
+}
+.video .textVideo .contentVideo {
+ height: 0;
+ opacity: 1;
+ transition-delay: 0s;
+ transition-duration: 0.4s;
+}
+.video .textVideo:hover .contentVideo {
+ opacity: 1;
+}*/
