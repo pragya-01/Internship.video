@@ -35,16 +35,19 @@ export default class videoComponent extends Component
 
     render()
     {
-        let newClassName="contentVideo";
+        let newClassNameVideo="videoLandingPageBlurrEffect";
+        let newClassNameContent="contentVideo";
         if(this.state.isTogglePaused)
-       { newClassName="contentVideoPlay";}
+       { newClassNameContent="contentVideoPlay";
+          newClassNameVideo="videoLandingPage";
+       }
 
 
         return(
    <div className="videoComponentLandingPage">
-    <video ref="vidref" className="videoLandingPage" id="video1" src={video} type="video/mp4" 
+    <video ref="vidref" classname={newClassNameVideo} id="video1" src={video} type="video/mp4" 
     poster={PosterImageVideoComponent} />
-    <div className={newClassName}>
+    <div className={newClassNameContent}>
     <button className="playVideoButtonLandingPage" id="playVideoButtonLandingPage" 
     onClick={this.playVideo}><FaPlayCircle/> </button>
            <p>
