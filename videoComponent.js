@@ -16,11 +16,20 @@ export default class videoComponent extends Component
     }
 
    playVideo() 
+    
     {
-        if(this.state.isTogglePaused){
+         if(this.state.isTogglePaused)
+         {  
+             this.refs.vidref.play();
+         }
+        else
+        {
+            this.refs.vidref.pause();
+        }
         this.setState(prevState => ({
             isTogglePaused :!prevState.isTogglePaused
         }));
+        
     }
     }
 
@@ -33,7 +42,7 @@ export default class videoComponent extends Component
 
         return(
    <div className="videoComponentLandingPage">
-    <video className="videoLandingPage" id="video1" src={video} type="video/mp4" 
+    <video ref="vidref" className="videoLandingPage" id="video1" src={video} type="video/mp4" 
     poster={PosterImageVideoComponent} />
     <div className={newClassName}>
     <button className="playVideoButtonLandingPage" id="playVideoButtonLandingPage" 
