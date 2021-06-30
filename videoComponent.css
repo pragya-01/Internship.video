@@ -1,0 +1,123 @@
+.videoComponentLandingPage{
+    background-color: #0f1d34;
+    position: relative;
+    display: inline-block;
+}
+
+.videoLandingPage
+{
+    border-radius: 3%;
+    border-color: 2px #cececf;
+  cursor: pointer;
+  margin:0 0 0 25%;
+}
+/*.blurrEffect{
+    -webkit-filter: blur(5px);
+    -o-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+*/
+.contentVideoPlay{
+    color:transparent;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    z-index: 999;
+    margin:-70% 10% 0 50%;
+    transform: translate(-50%,-50%);
+}
+.contentVideo {
+    position: relative;
+    display: inline-block;
+    transform: translate(-50%,-50%);
+    color: #FFF;
+    text-align: center;
+    z-index: 999;
+    margin:-70% 10% 0 50%;
+}
+
+.playVideoButtonLandingPage {
+    font-size: 200%;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    margin: 3% 10% 0 10%;
+    background-color: transparent;
+    color:#cececf;
+}
+
+.playVideoButtonLandingPage:hover {
+    color: #0f1d34;
+}
+
+/*
+.video1 {
+    /*-webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    border-radius: 3%;
+    border-color: 2px #cececf;
+  cursor: pointer;
+    /*-o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+  }
+  
+  #playVideoButtonLandingPage {
+    background-color: transparent;
+    color: #cececf;
+    font-size: 300%;
+    padding:10% 0 0 47%;
+    position: absolute;
+    cursor:pointer;
+  }
+  
+  .contentVideo{
+    align-items: center;
+    mix-blend-mode: overlay;
+    text-align: center;
+    color:black;
+    position: relative;
+    z-index: 1;
+  }
+  /*.video{
+    padding: 2% 2% 2% 2%;
+    position:relative;
+  }
+  .video1 {  
+   display: block;
+   position: absolute;
+   cursor: pointer;
+   overflow: hidden;
+  }
+  .textVideo {
+   opacity: 0;
+   cursor:pointer;
+   position:relative;
+   color: black;
+   background-color: rgba(200, 200, 200, 0.5);
+   width: 640px;
+   height: 250px;
+   padding:10% 0% 0 0;
+   text-align: center;
+   z-index:1;
+  }
+  .contentVideo{
+     font-size: 100%;
+  }
+  .video .textVideo:hover {
+   opacity: 1;
+  }
+  .video .textVideo .contentVideo {
+   height: 0;
+   opacity: 1;
+   transition-delay: 0s;
+   transition-duration: 0.4s;
+  }
+  .video .textVideo:hover .contentVideo {
+   opacity: 1;
+  }*/
