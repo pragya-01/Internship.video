@@ -17,7 +17,6 @@ export default class videoComponent extends Component
 
    playVideo() 
     {
-        alert('Click Happened');
         if(this.state.isTogglePaused){
         this.setState(prevState => ({
             isTogglePaused :!prevState.isTogglePaused
@@ -27,15 +26,16 @@ export default class videoComponent extends Component
 
     render()
     {
-        let className='ContentVideo';
-        if(!this.state.isTogglePaused)
-       { className='ContentVideoPlay';}
+        let newClassName="contentVideo";
+        if(this.state.isTogglePaused)
+       { newClassName="contentVideoPlay";}
+
 
         return(
    <div className="videoComponentLandingPage">
     <video className="videoLandingPage" id="video1" src={video} type="video/mp4" 
     poster={PosterImageVideoComponent} />
-    <div className={className}>
+    <div className={newClassName}>
     <button className="playVideoButtonLandingPage" id="playVideoButtonLandingPage" 
     onClick={this.playVideo}><FaPlayCircle/> </button>
            <p>
