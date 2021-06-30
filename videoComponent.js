@@ -16,41 +16,40 @@ export default class videoComponent extends Component
     }
 
    playVideo() 
-    
     {
-         if(this.state.isTogglePaused)
-         {  
-             this.refs.vidref.play();
-         }
-        else
-        {
-            this.refs.vidref.pause();
+        var videoLandingPageVariable= document.getElementById("videoLandingPageId")
+        if(this.state.isTogglePaused)
+        {  
+            videoLandingPageVariable.play();
         }
-        this.setState(prevState => ({
-            isTogglePaused :!prevState.isTogglePaused
-        }));
-        
-    }
-    }
+       else
+       {
+        videoLandingPageVariable.pause();
+       }
+       this.setState(prevState => ({
+           isTogglePaused :!prevState.isTogglePaused
+       }));
+       
+   }
 
     render()
     {
-        let newClassNameVideo="videoLandingPageBlurrEffect";
-        let newClassNameContent="contentVideo";
+        var newClassNameVideo="videoLandingPage";
+        var newClassNameContent="contentVideoPaused";
         if(this.state.isTogglePaused)
-       { newClassNameContent="contentVideoPlay";
-          newClassNameVideo="videoLandingPage";
+       { newClassNameContent="contentVideo";
+          newClassNameVideo="videoLandingPageBlurrEffect";
        }
 
 
         return(
    <div className="videoComponentLandingPage">
-    <video ref="vidref" classname={newClassNameVideo} id="video1" src={video} type="video/mp4" 
-    poster={PosterImageVideoComponent} />
-    <div className={newClassNameContent}>
     <button className="playVideoButtonLandingPage" id="playVideoButtonLandingPage" 
-    onClick={this.playVideo}><FaPlayCircle/> </button>
-           <p>
+    onClick={this.playVideo}>{this.state.isTogglePaused ? <FaPlayCircle/> : <FaPauseCircle/>} </button>
+    <video  className={newClassNameVideo} id="videoLandingPageId" src={video} type="video/mp4" 
+    poster={PosterImageVideoComponent} />
+      <div className={newClassNameContent}>
+           <p className="titleVideoLandingPage">
                Watch Video
            </p>
             <p>
@@ -67,14 +66,3 @@ export default class videoComponent extends Component
     }
 
     }; 
-    /* poster={PosterImageVideoComponent}
-     
-
-        if((this).paused)
-                {
-                    (this).play();
-                    (this).removeClass('blurEffect');
-                    ('.contentVideo').hide();
-                }
-    
-    */
